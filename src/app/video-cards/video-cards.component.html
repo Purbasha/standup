@@ -1,0 +1,51 @@
+<div class="pb-3 pt-4" *ngFor="let lst of videoList; let i = index">
+    <div class="d-flex w-100">
+        <!-- <button type="button" class="btn w-100" (click)="lst.isCollapsed = !lst.isCollapsed" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseBasic">
+            <h4 class="float-left pl-3">{{ lst.category }}</h4>
+            <h4>
+                <fa *ngIf="!lst.isCollapsed" class="float-right" name="angle-down"></fa>
+                <fa *ngIf="lst.isCollapsed" class="float-right" name="angle-up"></fa>
+            </h4>
+        </button> -->
+
+        <h4 class="float-left pl-3 w-90">{{ lst.category }}</h4>
+        <button type="button" class="float-right btn w-10" (click)="loadMore(lst)">More...
+        </button>
+ 
+    </div>
+    <div id="collapseBasic_{{i}}" [collapse]="lst.isCollapsed">
+        <div class="well well-lg">
+            <div class="container-fluid mt-4" style="display: none">
+                <div class="row">
+                    <div class="col-md-5 lib-item" data-category="view">
+                        <div class="lib-panel">
+                            <div class="row box-shadow">
+                                <div class="col-md-6">
+                                    <img class="lib-img-show" src="https://loremflickr.com/g/320/240/paris">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lib-row lib-header">
+                                        Example library
+                                        <div class="lib-header-seperator"></div>
+                                    </div>
+                                    <div class="lib-row lib-desc">
+                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                        ipsum
+                                        dolor Lorem ipsum dolor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid row mt-4 d-flex">
+                <div class="pl-4 pt-4" *ngFor="let vd of lst.list; let i = index">
+                    <!-- {{ vd | json }} -->
+                    <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

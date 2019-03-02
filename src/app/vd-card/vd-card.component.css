@@ -1,0 +1,13 @@
+.box-shadow {
+    -webkit-box-shadow: -1px 0px 33px -1px rgba(66,104,138,1);
+    -moz-box-shadow: -1px 0px 33px -1px rgba(66,104,138,1);
+    box-shadow: -1px 0px 33px -1px rgba(66,104,138,1);    
+}
+
+.v-card {
+    width: 19rem;
+}
+
+iframe {
+    height: 15rem
+}
