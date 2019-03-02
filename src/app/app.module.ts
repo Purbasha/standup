@@ -11,6 +11,7 @@ import { VideoCardsComponent } from './video-cards/video-cards.component';
 import { VdCardComponent } from './vd-card/vd-card.component';
 import { MoreVideosComponent } from './more-videos/more-videos.component';
 import { VideoService } from './video.service';
+import { VdPlayerComponent } from './vd-player/vd-player.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VideoService } from './video.service';
     NavigationBarComponent,
     VideoCardsComponent,
     VdCardComponent,
-    MoreVideosComponent
+    MoreVideosComponent,
+    VdPlayerComponent
   ],
   imports: [
     BrowserModule,

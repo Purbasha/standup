@@ -13,6 +13,7 @@ export class VideoCardsComponent implements OnInit {
   isOpen = false;
   router;
   videoList;
+  categoris;
 
   // videoList = [
   //   {
@@ -162,6 +163,7 @@ export class VideoCardsComponent implements OnInit {
   constructor(route: Router, videoService: VideoService) {
     this.router = route;
     this.videoList = videoService.getVideos();
+    this.categoris = videoService.getCategories();
   }
 
   ngOnInit() {

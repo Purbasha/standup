@@ -8,10 +8,10 @@
                 <fa *ngIf="lst.isCollapsed" class="float-right" name="angle-up"></fa>
             </h4>
         </button> -->
-
+<!-- 
         <h4 class="float-left pl-3 w-90">{{ lst.category }}</h4>
         <button type="button" class="float-right btn w-10" (click)="loadMore(lst)">More...
-        </button>
+        </button> -->
  
     </div>
     <div id="collapseBasic_{{i}}" [collapse]="lst.isCollapsed">
@@ -41,10 +41,19 @@
                 </div>
             </div>
             <div class="container-fluid row mt-4 d-flex">
+                    <!-- <vd-player></vd-player> -->
                 <div class="pl-4 pt-4" *ngFor="let vd of lst.list; let i = index">
                     <!-- {{ vd | json }} -->
-                    <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card>
+                    <!-- <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card> -->
+                    <!-- <vd-player></vd-player> -->
+                    <vd-player [vd]="vd" [indx]="i"></vd-player>
                 </div>
+                <div class="pl-4 pt-4" *ngFor="let cat of categoris; let i = index">
+                        <!-- {{ vd | json }} -->
+                        <!-- <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card> -->
+                        <!-- <vd-player></vd-player> -->                    
+                        <vd-player [cat]="cat" [indx]="i"></vd-player>
+                    </div>
             </div>
         </div>
     </div>
