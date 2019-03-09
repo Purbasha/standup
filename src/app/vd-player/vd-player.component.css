@@ -8,8 +8,10 @@ pre {
 
 .kl-card {
     margin-bottom: 15px;
-    width: 300px;
-    height: 300px;
+    /* width: 300px;
+    height: 300px; */
+    width: 250px;
+    height: 250px; 
 }
 
 .kl-card > .kl-card-block {
@@ -23,6 +25,7 @@ pre {
 }
 .kl-card > .kl-card-block.kl-md {
     height: 100%;
+    /* border-radius: 15px; */
 }
 .kl-card > .kl-card-block.kl-lg {
     height: 200px;

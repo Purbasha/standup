@@ -14,6 +14,7 @@ export class VideoCardsComponent implements OnInit {
   router;
   videoList;
   categoris;
+  defaultVideo;
 
   // videoList = [
   //   {
@@ -164,6 +165,7 @@ export class VideoCardsComponent implements OnInit {
     this.router = route;
     this.videoList = videoService.getVideos();
     this.categoris = videoService.getCategories();
+    this.defaultVideo = this.videoList[0].list[0]; 
   }
 
   ngOnInit() {
@@ -172,5 +174,9 @@ export class VideoCardsComponent implements OnInit {
   loadMore(vdslst: any): void {
     // this.router.navigate(['/more'], {cat: vdslst.category});
     this.router.navigate(['more', { cat: vdslst.category }]);
+  }
+
+  playSelectedVideo(vd) {
+    this.defaultVideo  = vd; 
   }
 }

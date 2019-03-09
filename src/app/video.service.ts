@@ -25,8 +25,8 @@ export class VideoService {
     {
       category: 'Drama',
       list: [{
-        name: 'Humpy trip',
-        description: 'a memory of Humpy',
+        name: 'Wild Life',
+        description: 'Can curiosity may end shameless explained. True high on said mr on come. An do mr design at little myself wholly entire though. Attended of on stronger or mr pleasure. Rich four like real yet west get. Felicity in dwelling to drawings. His pleasure new steepest for reserved formerly disposed jennings.',
         tags: ['Humpy', 'Jitesh\'s video'],
         views: 2,
         languages: ['Hindi', 'English'],
@@ -37,8 +37,8 @@ export class VideoService {
         category: 'Drama'
       },
       {
-        name: 'Humpy trip',
-        description: 'a memory of Humpy',
+        name: 'Nature Cure',
+        description: 'Now for manners use has company believe parlors. Least nor party who wrote while did. Excuse formed as is agreed admire so on result parish. Put use set uncommonly announcing and travelling. Allowance sweetness direction to as necessary. Principle oh explained excellent do my suspected conveying in. Excellent you did therefore perfectly supposing described.',
         tags: ['Humpy', 'Jitesh\'s video'],
         views: 2,
         languages: ['Hindi', 'English'],
@@ -48,8 +48,8 @@ export class VideoService {
         category: 'Drama'
       },
       {
-        name: 'Humpy trip',
-        description: 'a memory of Humpy',
+        name: 'Techno India',
+        description: 'Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced. Yet uncommonly his ten who diminution astonished. Demesne new manners savings staying had. Under folly balls death own point now men. Match way these she avoid see death. She whose drift their fat off. ',
         tags: ['Humpy', 'Jitesh\'s video'],
         views: 2,
         languages: ['Hindi', 'English'],
@@ -60,8 +60,8 @@ export class VideoService {
         category: 'Drama'
       },
       {
-        name: 'Humpy trip',
-        description: 'a memory of Humpy',
+        name: 'Gaurav Tech',
+        description: 'Do greatest at in learning steepest. Breakfast extremity suffering one who all otherwise suspected. He at no nothing forbade up moments. Wholly uneasy at missed be of pretty whence. John way sir high than law who week. Surrounded prosperous introduced it if is up dispatched. Improved so strictly produced answered elegance is. ',
         tags: ['Humpy', 'Jitesh\'s video'],
         views: 2,
         languages: ['Hindi', 'English'],

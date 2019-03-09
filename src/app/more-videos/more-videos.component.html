@@ -4,6 +4,9 @@
         <button type="button" class="float-right btn w-10" (click)="goBack()">Back
         </button>
     </div>
+    <!-- <div *ngIf="defaultVideo" class="container-fluid pt-4 d-flex w-100">
+        <app-vd-card class="box-shadow w-100" style="height: 400px" [vd]="defaultVideo" [indx]="0"></app-vd-card>
+    </div> -->
     <div id="collapseBasic_{{i}}" [collapse]="lst.isCollapsed">
         <div class="well well-lg">
             <div class="container-fluid mt-4" style="display: none">
@@ -31,10 +34,18 @@
                 </div>
             </div>
             <div class="container-fluid row mt-4 d-flex">
+                <div class="col-md-9 p-0 m-0">
+                        <div *ngIf="defaultVideo" class="container-fluid pt-4 d-flex w-100">
+                                <app-vd-card class="box-shadow w-100" style="height: 500px" [vd]="defaultVideo" [indx]="0"></app-vd-card>
+                            </div>
+                </div>    
+                <div class="col-md-3 p-0 m-0"   style="height: 600px; overflow-y: auto">
                 <div class="pl-4 pt-4" *ngFor="let vd of lst.list; let i = index">
                     <!-- {{ vd | json }} -->
-                    <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card>
+                    <!-- <app-vd-card class="box-shadow" [vd]="vd" [indx]="i"></app-vd-card> -->                    
+                    <vd-player [vd]="vd" (playVideoEvent)="playSelectedVideo($event)"  [indx]="i"></vd-player>
                 </div>
+            </div>
             </div>
         </div>
     </div>

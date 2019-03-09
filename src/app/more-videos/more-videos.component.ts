@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 export class MoreVideosComponent implements OnInit {
 
   videoList: any;
+  defaultVideo;
 
   constructor(
     route: ActivatedRoute,
@@ -20,6 +21,7 @@ export class MoreVideosComponent implements OnInit {
       console.log(param['cat']);
       const categoryName = param['cat'];
       this.videoList = videoService.getVideosForCategory(categoryName);
+      this.defaultVideo = this.videoList[0].list[0]; 
     });
   }
 
@@ -28,5 +30,10 @@ export class MoreVideosComponent implements OnInit {
 
   public goBack() {
     this.location.back();
+  }
+
+  
+  playSelectedVideo(vd) {
+    this.defaultVideo  = vd; 
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,7 @@ export class VdPlayerComponent implements OnInit {
   @Input() vd: any;
   @Input() cat: any;
   @Input() indx: any;
+  @Output() playVideoEvent = new EventEmitter<any>()
   router;
 
   constructor(route: Router) {
@@ -25,5 +26,9 @@ export class VdPlayerComponent implements OnInit {
   loadMore(catName: string): void {
     // this.router.navigate(['/more'], {cat: vdslst.category});
     this.router.navigate(['more', { cat: catName }]);
+  }
+
+  playVideo() {
+    this.playVideoEvent.emit(this.vd);
   }
 }

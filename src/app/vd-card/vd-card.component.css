@@ -5,9 +5,14 @@
 }
 
 .v-card {
-    width: 19rem;
+    /* width: 19rem; */
+    height: 100%;
+    width: 100%;
 }
 
 iframe {
-    height: 15rem
+    /* height: 15rem */
+    /* height: 500px; */
+    height: 100%;
+    width: 100%;
 }
